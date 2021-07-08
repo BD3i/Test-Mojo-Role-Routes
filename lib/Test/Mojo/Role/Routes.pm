@@ -1,13 +1,11 @@
 package Test::Mojo::Role::Routes;
 
 use strict;
-use warnings;
-
-our $VERSION = '0.001';
+use 5.008_005;
+our $VERSION = '0.01';
 
 use Mojo::Base -role;
 use Mojo::Util qw(encode);
-
 
 ## make requests for named routes
 
@@ -104,6 +102,9 @@ sub route_isnt {
 sub _desc { encode 'UTF-8', shift || shift }
 
 1;
+__END__
+
+=encoding utf-8
 
 =head1 NAME
 
@@ -111,19 +112,25 @@ Test::Mojo::Role::Routes - Module abstract placeholder text
 
 =head1 SYNOPSIS
 
-=for comment Brief examples of using the module.
+  use Test::Mojo::Role::Routes;
 
 =head1 DESCRIPTION
 
-=for comment The module's description.
+Test::Mojo::Role::Routes is
 
 =head1 AUTHOR
 
-Brian Davis <bdiii@cpan.org>
+Brian Davis E<lt>bdiii@cpan.orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2021 by BD3i LLC.
+This software is copyright (c) 2021 by Brian Davis and BD3i LLC.
+
+=head1 LICENSE
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
+
+=head1 SEE ALSO
+
+=cut

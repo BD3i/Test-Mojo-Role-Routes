@@ -1,4 +1,11 @@
 /Test-Mojo-Role-Routes-*
+/.build
+/_build*
+/Build
+MYMETA.*
+!META.json
+/.prove
+
 
 !Build/
 .last_cover_stats
