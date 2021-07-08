@@ -108,21 +108,24 @@ __END__
 
 =head1 NAME
 
-Test::Mojo::Role::Routes - Module abstract placeholder text
+Test::Mojo::Role::Routes - Write Mojo tests using named routes.
 
 =head1 SYNOPSIS
 
-  use Test::Mojo::Role::Routes;
+  use Test::Mojo;
+  my $t = Test::Mojo->with_roles('+Routes')->new('MyApp');
+
+  $t->get_route_ok('dashboard')->status_is(200)->route_is('dashboard');
 
 =head1 DESCRIPTION
 
-Test::Mojo::Role::Routes is
+Test::Mojo::Role::Routes allows you to refrence your named routes in tests.
 
 =head1 AUTHOR
 
-Brian Davis E<lt>bdiii@cpan.orgE<gt>
+Brian Davis, BD3i LLC E<lt>bdiii@cpan.orgE<gt>
 
-=head1 COPYRIGHT AND LICENSE
+=head1 COPYRIGHT
 
 This software is copyright (c) 2021 by Brian Davis and BD3i LLC.
 
