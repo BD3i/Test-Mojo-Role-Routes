@@ -11,7 +11,7 @@ Test::Mojo::Role::Routes - Write Mojo tests using named routes.
 
 # DESCRIPTION
 
-Test::Mojo::Role::Routes allows you to refrence your named routes in tests.
+Test::Mojo::Role::Routes allows you to use your named routes in tests.
 
 # AUTHOR
 
