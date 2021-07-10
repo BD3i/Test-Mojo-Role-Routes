@@ -1,12 +1,16 @@
 use strict;
 use Test::More;
+use Mojo::File qw(curfile);
+use Test::Mojo::WithRoles 'Routes';
 
-use FindBin;
-use lib "$FindBin::Bin/../lib";
+my $script = curfile->dirname->sibling('t/myapp.pl');
 
-use Test::Mojo::Role::Routes;
+my $t = Test::Mojo::WithRoles->new($script);
 
-# replace with the actual test
-ok 1;
+ok $t->does('Test::Mojo::Role::Routes'), 'does Routes';
 
-done_testing;
+$t->get_route_ok('index')
+  ->route_is('index')
+  ->status_is(200);
+
+done_testing();
