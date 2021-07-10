@@ -13,6 +13,10 @@ $t->get_route_ok('unknown')
   ->route_is('unknown')
   ->status_is(404);
 
+$t->head_route_ok('index')
+  ->route_is('index')
+  ->status_is(200);
+
 $t->get_route_ok('index')
   ->route_is('index')
   ->status_is(200);
