@@ -2,7 +2,7 @@ package Test::Mojo::Role::Routes;
 
 use strict;
 use 5.008_005;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use Mojo::Base -role;
 use Mojo::Util qw(encode);
